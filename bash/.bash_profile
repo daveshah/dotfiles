@@ -5,4 +5,4 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
-export CLICOLOR=true
+export CLICOLOR=1
