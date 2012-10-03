@@ -1,6 +1,8 @@
 [user]
     name = David Shah
     email = david.a.shah@gmail.com
+    #name = das
+    #email = das@urbancode.com
 [color]
     ui = auto
 [alias]
@@ -22,7 +24,7 @@
     div = divergence
     gn = goodness
     gnc = goodness --cached
-
+    logo = log --oneline
 [merge]
     tool = vimdiff
 
