@@ -23,6 +23,8 @@
     gn = goodness
     gnc = goodness --cached
     logo = log --oneline
+    l = "!source ~/.dotfiles/git/git-helpers && pretty_git_log"
+    r = "!git l -30"
 [merge]
     tool = vimdiff
 
