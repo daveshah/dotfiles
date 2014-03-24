@@ -25,5 +25,9 @@ start_postgres() {
 	postgres -D /usr/local/var/postgres
 }
 
+scalagen() {
+	~/.dotfiles/bash/scalagen.sh
+}
+
 # Setting PATH for Python 3.3
 #PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:${PATH}"
