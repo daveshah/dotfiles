@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Generate simple sbt build file ('simple sbt', well - that was redundant...)
-echo $'name := "project name"\n\nversion := "1.0.0-SNAPSHOT"\n\nscalaVersion := "2.10.3"\n\nlibraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.1.0" % "test"\n\n' > build.sbt
+echo $'name := "project name"\n\nversion := "1.0.0-SNAPSHOT"\n\nscalaVersion := "2.11.2"\n\nlibraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.1" % "test"\n\n' > build.sbt
 
 #Create simple project directory structure
 mkdir -p src/main/scala src/test/scala src/main/resources
