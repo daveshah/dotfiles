@@ -1,3 +1,17 @@
+set nocompatible   				" required
+filetype off     				" required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim' 
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+syntax on
+
 set background=dark
 set encoding=utf-8
 set ignorecase
@@ -13,7 +27,9 @@ set smartindent
 set showcmd
 set visualbell
 
-syntax on
 
-filetype indent on
+" START NERDTree setup
+autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" END NERDTree setup
 
