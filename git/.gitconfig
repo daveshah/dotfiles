@@ -4,6 +4,7 @@
 [color]
     ui = auto
 [alias]
+	pr = pull --rebase
     st = status
     ci = commit
     co = checkout
@@ -16,6 +17,7 @@
     noff = merge --no-ff
     fa = fetch --all
     pom = push origin master
+	phm = push heroku master
     b = branch
     ds = diff --stat=160,120
     dh1 = diff HEAD~1
@@ -25,6 +27,9 @@
     logo = log --oneline
     l = "!source ~/.dotfiles/git/git-helpers && pretty_git_log"
     r = "!git l -30"
+	cm = checkout master
 [merge]
     tool = vimdiff
 
+[core]
+	ignorecase = false
