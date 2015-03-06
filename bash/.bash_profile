@@ -10,27 +10,23 @@ then
 	ln -s "$sublime_location" "$sublime_command"
 fi
 
-#PS1="\360\237\215\272 :"
+if [[ $(date +%u) -eq 5 ]]; 
+then
+	PS1="Happy Friday!\360\237\215\272:"
+fi
 
 #/usr/local/bin comes first for homebrew
 PATH=/usr/local/bin:$PATH
 
 #add Android to the path
 export ANDROID_HOME=/Users/daveshah/Development/android-sdks
-PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/19.0.1
-
-#add Play Framework
-PATH=$PATH:/Users/daveshah/Development/play-framework/play-2.2.2
+PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 
 #add node bin
 PATH=$PATH:/usr/local/share/npm/bin
 
 #Z
 . `brew --prefix`/etc/profile.d/z.sh
-
-eclipse() {
-	open /Applications/eclipse/Eclipse.app
-}
 
 start_postgres() {
 	postgres -D /usr/local/var/postgres

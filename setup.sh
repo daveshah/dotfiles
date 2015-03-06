@@ -18,3 +18,8 @@ if [ ! -f ~/.gitconfig ]; then
 	ln -s .dotfiles/git/.gitconfig ~/.gitconfig
 fi
 
+if [ ! -f ~/.bash_profile ]; then
+	echo "Updating your .bash_profile"
+	ln -s .dotfiles/bash/.bash_profile ~/.bash_profile
+fi
+
