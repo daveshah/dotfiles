@@ -12,7 +12,7 @@ fi
 
 if [[ $(date +%u) -eq 5 ]]; 
 then
-	PS1="Happy Friday!\360\237\215\272:"
+	PS1="Happy Friday!\360\237\215\272 :"
 fi
 
 #/usr/local/bin comes first for homebrew
