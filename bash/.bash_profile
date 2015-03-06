@@ -10,6 +10,9 @@ then
 	ln -s "$sublime_location" "$sublime_command"
 fi
 
+#A few wise words
+fortune | cowsay
+
 if [[ $(date +%u) -eq 5 ]]; 
 then
 	PS1="Happy Friday!\360\237\215\272 :"
