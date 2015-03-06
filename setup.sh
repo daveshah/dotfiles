@@ -13,3 +13,8 @@ if [ ! -f ~/.vimrc ]; then
 	ln -s .dotfiles/vim/.vimrc ~/.vimrc
 fi
 
+if [ ! -f ~/.gitconfig ]; then
+	echo "Updating your .gitconfig"
+	ln -s .dotfiles/git/.gitconfig ~/.gitconfig
+fi
+
