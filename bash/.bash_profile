@@ -21,6 +21,9 @@ fi
 #/usr/local/bin comes first for homebrew
 PATH=/usr/local/bin:$PATH
 
+#Add firefox to path
+PATH=/Users/daveshah/Applications/Firefox.app/Contents/MacOS:$PATH
+
 #add Android to the path
 export ANDROID_HOME=/Users/daveshah/Development/android-sdks
 PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
@@ -45,6 +48,10 @@ start_mysql() {
 
 stop_mysql() {
 	mysql.server stop 
+}
+
+pretty_print_json() {
+	curl -sS $1 | python -m json.tool
 }
 
 # Setting PATH for Python 3.3
