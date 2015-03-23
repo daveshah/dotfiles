@@ -7,6 +7,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' 
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fireplace'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
