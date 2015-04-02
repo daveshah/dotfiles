@@ -54,6 +54,10 @@ pretty_print_json() {
 	curl -sS $1 | python -m json.tool
 }
 
+pretty_print_json_string() {
+	echo $1 | python -m json.tool 
+}
+
 # Setting PATH for Python 3.3
 #PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:${PATH}"
 
