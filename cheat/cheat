@@ -1,0 +1,5 @@
+# To edit an existing cheatsheat
+cheat -e foo
+
+# To list cheatsheats
+cheat -l

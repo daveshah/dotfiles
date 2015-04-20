@@ -18,6 +18,8 @@ then
 	PS1="Happy Friday!\360\237\215\272 :"
 fi
 
+export EDITOR=/usr/bin/vim
+
 #/usr/local/bin comes first for homebrew
 PATH=/usr/local/bin:$PATH
 
@@ -27,6 +29,10 @@ PATH=/Users/daveshah/Applications/Firefox.app/Contents/MacOS:$PATH
 #add Android to the path
 export ANDROID_HOME=/Users/daveshah/Development/android-sdks
 PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
+
+#add Dex2Jar to the path
+export DEX2JAR_PATH=/Users/daveshah/Development/dex2jar-0.0.9.15
+PATH=$PATH:$DEX2JAR_PATH
 
 #add node bin
 PATH=$PATH:/usr/local/share/npm/bin
