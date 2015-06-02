@@ -2,6 +2,8 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=1
 alias ?=pwd
 
+source dnvm.sh
+
 sublime_command="/usr/local/bin/subl"
 sublime_location="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
