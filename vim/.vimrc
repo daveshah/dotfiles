@@ -9,6 +9,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'christoomey/vim-conflicted'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

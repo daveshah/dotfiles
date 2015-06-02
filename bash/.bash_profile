@@ -5,6 +5,9 @@ alias ?=pwd
 sublime_command="/usr/local/bin/subl"
 sublime_location="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
 
+#JAVA_HOME fix on OSX
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 if [ ! -L "$sublime_command" ]
 then
 	ln -s "$sublime_location" "$sublime_command"
@@ -23,25 +26,24 @@ export EDITOR=/usr/bin/vim
 #/usr/local/bin comes first for homebrew
 PATH=/usr/local/bin:$PATH
 
-#Add firefox to path
-PATH=/Users/daveshah/Applications/Firefox.app/Contents/MacOS:$PATH
-
 #add Android to the path
 export ANDROID_HOME=/Users/daveshah/Development/android-sdks
 PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
 
-#add Dex2Jar to the path
-export DEX2JAR_PATH=/Users/daveshah/Development/dex2jar-0.0.9.15
-PATH=$PATH:$DEX2JAR_PATH
-
 #add node bin
 PATH=$PATH:/usr/local/share/npm/bin
+
+export DOT_FILE_DIR=$HOME/.dotfiles
 
 #Z
 . `brew --prefix`/etc/profile.d/z.sh
 
 start_postgres() {
 	postgres -D /usr/local/var/postgres
+}
+
+adb() {
+	$ANDROID_HOME/platform-tools/adb "$@" | $DOT_FILE_DIR/bash/logcat_colors.sh
 }
 
 scalagen() {
