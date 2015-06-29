@@ -10,6 +10,11 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'christoomey/vim-conflicted'
+Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'othree/html5.vim'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required

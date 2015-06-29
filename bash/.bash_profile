@@ -3,6 +3,8 @@ export CLICOLOR=1
 alias ?=pwd
 
 source dnvm.sh
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 sublime_command="/usr/local/bin/subl"
 sublime_location="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
@@ -14,9 +16,6 @@ if [ ! -L "$sublime_command" ]
 then
 	ln -s "$sublime_location" "$sublime_command"
 fi
-
-#A few wise words
-fortune | cowsay
 
 if [[ $(date +%u) -eq 5 ]]; 
 then

@@ -16,6 +16,7 @@
     pullff = pull --ff-only
     noff = merge --no-ff
     fa = fetch --all
+	fp = fetch -p
     pom = push origin master
 	phm = push heroku master
     b = branch
