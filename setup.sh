@@ -23,7 +23,12 @@ if [ ! -f ~/.bash_profile ]; then
 	ln -s .dotfiles/bash/.bash_profile ~/.bash_profile
 fi
 
-if [ ! -f ~/.cheat ]; then
+if [ ! -d ~/.cheat ]; then
 	echo "Updating cheat"
 	ln -s .dotfiles/cheat/ ~/.cheat
+fi
+
+if [ ! -f ~/.zshrc ]; then
+	echo "Updating zshrc"
+	ln -s .dotfiles/zsh/.zshrc ~/.zshrc
 fi

@@ -2,6 +2,8 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=1
 alias ?=pwd
 
+source ~/.profile
+
 
 sublime_command="/usr/local/bin/subl"
 sublime_location="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl"
@@ -64,7 +66,5 @@ pretty_print_json_string() {
 	echo $1 | python -m json.tool 
 }
 
-# Setting PATH for Python 3.3
-#PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:${PATH}"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
