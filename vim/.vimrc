@@ -13,7 +13,8 @@ Plugin 'christoomey/vim-conflicted'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'othree/html5.vim'
+Plugin 'othree/html5.cheatvim'
+Plugin 'elzr/vim-json'
 
 
 call vundle#end()            " required
@@ -39,5 +40,6 @@ set visualbell
 " START NERDTree setup
 autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd VimEnter * wincmd p
 " END NERDTree setup
 

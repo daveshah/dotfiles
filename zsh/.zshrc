@@ -3,6 +3,8 @@ export ZSH=/Users/shah/.oh-my-zsh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
