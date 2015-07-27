@@ -1,6 +1,6 @@
 [user]
-    name = David Shah
-    email = david.a.shah@gmail.com
+    name = Dave Shah
+    email = dave.shah@genomoncology.com
 [color]
     ui = auto
 [alias]
@@ -34,3 +34,6 @@
 
 [core]
 	ignorecase = false
+	editor = /usr/bin/vim
+[push]
+	default = simple
