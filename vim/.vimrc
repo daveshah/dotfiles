@@ -13,8 +13,8 @@ Plugin 'christoomey/vim-conflicted'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'othree/html5.cheatvim'
 Plugin 'elzr/vim-json'
+Plugin 'kana/vim-fakeclip'
 
 
 call vundle#end()            " required

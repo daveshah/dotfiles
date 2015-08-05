@@ -1,15 +1,48 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/shah/.oh-my-zsh
 
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+#GO Stuff!
+for file in ~/go/*.sh; do source $file; done
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+
+export EDITOR=/usr/bin/vim
+
+function setjdk() {
+  if [ $# -ne 0 ]; then
+	removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+	if [ -n "${JAVA_HOME+x}" ]; then
+	removeFromPath $JAVA_HOME
+	fi
+	export JAVA_HOME=`/usr/libexec/java_home -v $@`
+	export PATH=$JAVA_HOME/bin:$PATH
+	fi
+}
+
+function removeFromPath() {
+   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+}
+setjdk 1.7
+
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128M"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+
+function apache_ds_hack() {
+	sudo launchctl unload /Library/LaunchDaemons/org.apache.directory.server.plist
+	sudo rm /usr/local/apacheds-2.0.0-M15/instances/default/run/apacheds-default.pid
+	sudo launchctl load /Library/LaunchDaemons/org.apache.directory.server.plist
+}
+
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -57,10 +90,12 @@ plugins=(git)
 
 # User configuration
 
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:"/Users/shah/.rvm/gems/ruby-2.2.2/bin:/Users/shah/.rvm/gems/ruby-2.2.2@global/bin:/Users/shah/.rvm/rubies/ruby-2.2.2/bin:/Users/shah/.rvm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/daveshah/Development/android-sdks/platform-tools:/Users/daveshah/Development/android-sdks/tools:/usr/local/share/npm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+alias remotes='cd /Volumes'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
