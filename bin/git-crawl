@@ -1,0 +1,8 @@
+#!/bin/sh
+USAGE="<commit-ish>"
+. "$(git --exec-path)/git-sh-setup"
+test -n "$*" || usage
+
+next_commit=$(git rev-list --reverse HEAD..$1 | head -1)
+: ${next_commit:=$1}
+git checkout $next_commit

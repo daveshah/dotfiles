@@ -8,6 +8,13 @@ bindkey -v
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+#Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+alias g=git
+
 #GO Stuff!
 for file in ~/go/*.sh; do source $file; done
 
@@ -45,6 +52,10 @@ function apache_ds_hack() {
 	sudo launchctl load /Library/LaunchDaemons/org.apache.directory.server.plist
 }
 
+#Pythonage
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
 
 
 # Uncomment the following line to use case-sensitive completion.
@@ -92,8 +103,9 @@ function apache_ds_hack() {
 plugins=(git)
 
 # User configuration
+#
 
-export PATH=$PATH:"/Users/shah/.rvm/gems/ruby-2.2.2/bin:/Users/shah/.rvm/gems/ruby-2.2.2@global/bin:/Users/shah/.rvm/rubies/ruby-2.2.2/bin:/Users/shah/.rvm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/daveshah/Development/android-sdks/platform-tools:/Users/daveshah/Development/android-sdks/tools:/usr/local/share/npm/bin"
+export PATH=$PATH:"/Users/shah/.rvm/gems/ruby-2.2.2/bin:/Users/shah/.rvm/gems/ruby-2.2.2@global/bin:/Users/shah/.rvm/rubies/ruby-2.2.2/bin:/Users/shah/.rvm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/daveshah/Development/android-sdks/platform-tools:/Users/daveshah/Development/android-sdks/tools:/usr/local/share/npm/bin:/Users/shah/.dotfiles/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
