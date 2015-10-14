@@ -104,9 +104,13 @@ plugins=(git)
 
 # User configuration
 #
+#
+FIREFOX=/opt/homebrew-cask/Caskroom/firefox/41.0.1/Firefox.app/Contents/MacOS
 
 export PATH=$PATH:"/Users/shah/.rvm/gems/ruby-2.2.2/bin:/Users/shah/.rvm/gems/ruby-2.2.2@global/bin:/Users/shah/.rvm/rubies/ruby-2.2.2/bin:/Users/shah/.rvm/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/daveshah/Development/android-sdks/platform-tools:/Users/daveshah/Development/android-sdks/tools:/usr/local/share/npm/bin:/Users/shah/.dotfiles/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+#
+export PATH=$PATH:$FIREFOX
 
 source $ZSH/oh-my-zsh.sh
 
