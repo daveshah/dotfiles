@@ -15,7 +15,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'elzr/vim-json'
 Plugin 'kana/vim-fakeclip'
-Plugin 'davidhalter/jedi-vim'
+Plugin 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
