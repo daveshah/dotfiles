@@ -4,9 +4,10 @@ export ZSH=/Users/shah/.oh-my-zsh
 #Because VIM all the things!
 bindkey -v
 
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -25,7 +26,7 @@ CASE_SENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -86,12 +87,10 @@ function setjdk() {
 	export PATH=$JAVA_HOME/bin:$PATH
 	fi
 }
-setjdk 1.8
 
 function removeFromPath() {
    export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
-
 
 function apache_ds_hack() {
 	sudo launchctl unload /Library/LaunchDaemons/org.apache.directory.server.plist
