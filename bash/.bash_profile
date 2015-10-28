@@ -38,33 +38,5 @@ export DOT_FILE_DIR=$HOME/.dotfiles
 #Z
 . `brew --prefix`/etc/profile.d/z.sh
 
-start_postgres() {
-	postgres -D /usr/local/var/postgres
-}
-
-adb() {
-	$ANDROID_HOME/platform-tools/adb "$@" | $DOT_FILE_DIR/bash/logcat_colors.sh
-}
-
-scalagen() {
-	~/.dotfiles/bash/scalagen.sh
-}
-
-start_mysql() {
-	mysql.server start
-}
-
-stop_mysql() {
-	mysql.server stop 
-}
-
-pretty_print_json() {
-	curl -sS $1 | python -m json.tool
-}
-
-pretty_print_json_string() {
-	echo $1 | python -m json.tool 
-}
-
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
