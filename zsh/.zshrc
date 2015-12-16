@@ -24,6 +24,9 @@ export PATH=$PATH:"~/.dotfiles/bin"
 
 source $ZSH/oh-my-zsh.sh
 
+#Pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 #AutoJump (j)
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -49,3 +52,4 @@ for file in ~/.dotfiles/bin/func/*.sh; do source $file; done
 #Aliai
 alias g=git
 alias remotes='cd /Volumes'
+

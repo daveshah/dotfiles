@@ -16,11 +16,15 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'elzr/vim-json'
 Plugin 'kana/vim-fakeclip'
 Plugin 'bling/vim-airline'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
 
+" Map to run mix tests => may wish to change up the test run command by
+" filetype in the future!
+:map <F10> :w\|:!mix test
 
 set background=dark
 set encoding=utf-8
