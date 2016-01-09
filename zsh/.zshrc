@@ -52,4 +52,8 @@ for file in ~/.dotfiles/bin/func/*.sh; do source $file; done
 #Aliai
 alias g=git
 alias remotes='cd /Volumes'
+alias v='vim'
 
+
+export NVM_DIR="/Users/shah/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

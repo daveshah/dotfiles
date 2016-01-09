@@ -17,6 +17,7 @@ Plugin 'elzr/vim-json'
 Plugin 'kana/vim-fakeclip'
 Plugin 'bling/vim-airline'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
