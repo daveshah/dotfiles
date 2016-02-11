@@ -16,8 +16,11 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'elzr/vim-json'
 Plugin 'kana/vim-fakeclip'
 Plugin 'bling/vim-airline'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'kien/ctrlp.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'mattreduce/vim-mix'
+Plugin 'docunext/closetag.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -47,5 +50,6 @@ set visualbell
 autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd VimEnter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " END NERDTree setup
 

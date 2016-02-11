@@ -53,6 +53,7 @@ for file in ~/.dotfiles/bin/func/*.sh; do source $file; done
 alias g=git
 alias remotes='cd /Volumes'
 alias v='vim'
+alias c='clear'
 
 
 export NVM_DIR="/Users/shah/.nvm"
