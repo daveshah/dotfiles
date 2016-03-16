@@ -25,3 +25,8 @@ adb() {
 scalagen() {
 	~/.dotfiles/bash/scalagen.sh
 }
+
+rails_migrate() {
+	bin/rake db:migrate RAILS_ENV=development 
+	bin/rake db:migrate RAILS_ENV=test
+}
