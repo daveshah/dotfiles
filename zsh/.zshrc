@@ -54,7 +54,7 @@ alias g=git
 alias remotes='cd /Volumes'
 alias v='vim'
 alias c='clear'
-
+alias be='bundle exec'
 
 export NVM_DIR="/Users/shah/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
