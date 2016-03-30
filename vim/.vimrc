@@ -23,8 +23,9 @@ Plugin 'mattreduce/vim-mix'
 Plugin 'docunext/closetag.vim'
 Plugin 'tpope/vim-markdown'
 Plugin 'szw/vim-tags'
-
-" TODO - how do ctags work IRL?
+Plugin 'hiukkanen/vim-hamlc'
+Plugin 'mxw/vim-jsx'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -32,7 +33,6 @@ syntax on
 
 " Map to run mix tests => may wish to change up the test run command by
 " filetype in the future!
-" TODO - update for various project
 :map <F10> :w\|:!mix test
 
 set background=dark
