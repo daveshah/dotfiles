@@ -4,7 +4,7 @@
 [color]
     ui = auto
 [alias]
-	pr = pull --rebase
+	p = pull --rebase
     st = status
     ci = commit
     co = checkout
