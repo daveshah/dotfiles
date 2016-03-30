@@ -8,27 +8,4 @@ if [ ! -d "$VUNDLE_FILE" ]; then
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
-if [ ! -f ~/.vimrc ]; then
-	echo "Updating your .vimrc"
-	ln -s .dotfiles/vim/.vimrc ~/.vimrc
-fi
-
-if [ ! -f ~/.gitconfig ]; then
-	echo "Updating your .gitconfig"
-	ln -s .dotfiles/git/.gitconfig ~/.gitconfig
-fi
-
-if [ ! -f ~/.bash_profile ]; then
-	echo "Updating your .bash_profile"
-	ln -s .dotfiles/bash/.bash_profile ~/.bash_profile
-fi
-
-if [ ! -d ~/.cheat ]; then
-	echo "Updating cheat"
-	ln -s .dotfiles/cheat/ ~/.cheat
-fi
-
-if [ ! -f ~/.zshrc ]; then
-	echo "Updating zshrc"
-	ln -s .dotfiles/zsh/.zshrc ~/.zshrc
-fi
+for directory in $(ls -d */); do stow ${directory}; done
