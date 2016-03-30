@@ -21,6 +21,10 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'mattreduce/vim-mix'
 Plugin 'docunext/closetag.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'szw/vim-tags'
+
+" TODO - how do ctags work IRL?
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -28,6 +32,7 @@ syntax on
 
 " Map to run mix tests => may wish to change up the test run command by
 " filetype in the future!
+" TODO - update for various project
 :map <F10> :w\|:!mix test
 
 set background=dark
