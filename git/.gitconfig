@@ -4,6 +4,7 @@
 [color]
     ui = auto
 [alias]
+	d = diff
 	p = pull --rebase
     st = status
     ci = commit

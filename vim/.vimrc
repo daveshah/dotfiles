@@ -10,9 +10,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fireplace'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'christoomey/vim-conflicted'
-Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'elzr/vim-json'
 Plugin 'kana/vim-fakeclip'
 Plugin 'bling/vim-airline'
@@ -26,6 +26,7 @@ Plugin 'szw/vim-tags'
 Plugin 'hiukkanen/vim-hamlc'
 Plugin 'mxw/vim-jsx'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,8 +42,9 @@ set ignorecase
 set incsearch
 set number
 set ruler
-set tabstop=4
-set shiftwidth=4
+set expandtab
+set tabstop=2
+set shiftwidth=2
 set smartindent
 set number
 set ruler
@@ -50,6 +52,10 @@ set smartindent
 set showcmd
 set visualbell
 
+" Because I'm lazy
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 
 " START NERDTree setup
 autocmd vimenter * NERDTree
