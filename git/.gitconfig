@@ -36,5 +36,6 @@
 [core]
 	ignorecase = false
 	editor = /usr/bin/vim
+	excludesfile = /Users/dshah/.gitignore_global
 [push]
 	default = simple
