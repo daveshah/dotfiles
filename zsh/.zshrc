@@ -68,6 +68,7 @@ EDITOR=/usr/bin/vim
 
 #Added RVM in .zshenv as outlined here: http://rvm.io/integration/vim
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="~/bin:$PATH"
 
 #funcs
 for file in ~/.dotfiles/bin/func/*.sh; do source $file; done
@@ -83,5 +84,10 @@ alias c='clear'
 alias be='bundle exec'
 alias t='tmux'
 
+#Because ssh-add ~/.ssh/id_rsa over and over again for deployment became pretty annoying
+ssh-add -L &> /dev/null
+if [ $? -eq 1 ]; then
+  ssh-add
+fi
 
 
