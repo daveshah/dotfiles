@@ -18,10 +18,6 @@ stop_mysql() {
 	mysql.server stop 
 }
 
-adb() {
-	$ANDROID_HOME/platform-tools/adb "$@" | $DOT_FILE_DIR/bash/logcat_colors.sh
-}
-
 scalagen() {
 	~/.dotfiles/bash/scalagen.sh
 }

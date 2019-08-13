@@ -7,9 +7,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' 
 
-"Browseage
-Plugin 'scrooloose/nerdtree'
-
 "Git diff
 Plugin 'christoomey/vim-conflicted'
 
@@ -39,6 +36,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'kana/vim-fakeclip'
 Plugin 'bling/vim-airline'
 Plugin 'docunext/closetag.vim'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -63,19 +61,11 @@ set number
 set ruler
 set smartindent
 set showcmd
-set visualbell
 
 " Because I'm lazy
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-
-" START NERDTree setup
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd VimEnter * wincmd p
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" END NERDTree setup
 
 "Powerline Bling
 let g:airline_powerline_fonts=1
