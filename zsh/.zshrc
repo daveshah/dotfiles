@@ -147,8 +147,3 @@ function docker_cleanup() {
   docker volume rm $(/usr/local/bin/docker volume ls -f dangling=true -q)
   docker rmi $(docker images -f dangling=true -q)
 }
-
-# antigen package manager
-source /usr/local/share/antigen/antigen.zsh
-# zsh-autosuggestions
-antigen bundle zsh-users/zsh-autosuggestions

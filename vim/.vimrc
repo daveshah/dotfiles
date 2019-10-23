@@ -1,44 +1,6 @@
 set nocompatible   				" required
 filetype off     				" required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim' 
-
-"Git diff
-Plugin 'christoomey/vim-conflicted'
-
-"ctrl-p search
-Plugin 'kien/ctrlp.vim'
-
-"automatic end's
-Plugin 'tpope/vim-endwise'
-
-"Ctags
-Plugin 'szw/vim-tags'
-
-"lang/framework support
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'pangloss/vim-javascript'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'mattreduce/vim-mix'
-Plugin 'elzr/vim-json'
-Plugin 'mxw/vim-jsx'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'hiukkanen/vim-hamlc'
-
-Plugin 't9md/vim-ruby-xmpfilter'
-Plugin 'kana/vim-fakeclip'
-Plugin 'bling/vim-airline'
-Plugin 'docunext/closetag.vim'
-Plugin 'scrooloose/nerdtree'
-
-call vundle#end()            " required
 filetype plugin indent on    " required
 syntax on
 
