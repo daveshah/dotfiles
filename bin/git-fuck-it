@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# Throw away all changes back to the last commit
-
-git reset --hard HEAD
-git clean -fd
